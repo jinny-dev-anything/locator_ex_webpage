@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML All-in-One Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f9f9f9;
+      line-height: 1.6;
+    }
+    section {
+      margin-bottom: 50px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .hidden-button {
+      display: none;
+    }
+    .long-text {
+      height: 2000px; /* Scroll test */
+      background: linear-gradient(#fff, #ccc);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌐 HTML Example Page</h1>
+
+  <section>
+    <h2>1. Hyperlink</h2>
+    <a href="https://example.com" target="_blank">Visit Example.com</a>
+  </section>
+
+  <section>
+    <h2>2. Form Inputs</h2>
+    <label for="name">Text Input:</label>
+    <input type="text" id="name" name="name" required /><br /><br />
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" /><br /><br />
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" /><br /><br />
+
+    <label for="date">Date:</label>
+    <input type="date" id="date" /><br /><br />
+
+    <label for="number">Number:</label>
+    <input type="number" id="number" /><br /><br />
+
+  <p>Select your interests (multiple allowed):</p>
+  <label>
+    <input id="interest-news" type="checkbox" name="interests" value="news" /> News
+  </label><br />
+  <label>
+    <input id="interest-events" type="checkbox" name="interests" value="events" /> Events
+  </label><br />
+  <label>
+    <input id="interest-offers" type="checkbox" name="interests" value="offers" /> Special Offers
+  </label><br /><br />
+
+  <p>Gender:</p>
+  <label>
+    <input id="gender-male" type="radio" name="gender" value="male" /> Male
+  </label>
+  <label>
+    <input id="gender-female" type="radio" name="gender" value="female" /> Female
+  </label><br /><br />
+
+    <label for="country">Dropdown:</label>
+    <select id="country" name="country">
+      <option value="">--Select Country--</option>
+      <option value="us">United States</option>
+      <option value="kr">South Korea</option>
+      <option value="jp">Japan</option>
+    </select><br /><br />
+
+    <label for="toggle">Toggle Switch:</label>
+    <input type="checkbox" id="toggle" role="switch" /><br /><br />
+
+    <button id="btn-form-submit" onclick="handleSubmit()">Submit Form</button>
+    
+  </section>
+
+  <section>
+    <h2>3. Button States</h2>
+    <button id="btn-alert-normal" onclick="alert('Button clicked!')">Normal Button</button>
+    <button id="btn-disabled" disabled>Disabled Button</button>
+    <button id="btn-hidden-css" class="hidden-button">Hidden Button</button>
+    <button id="btn-hidden-html" hidden>Hidden by HTML 'hidden' attribute</button>
+    <button id="btn-alert-accept" onclick="showAlert()">Show Alert</button>
+    <button id="btn-confirm" onclick="showConfirm()">Show Confirm</button>
+    <button id="btn-prompt" onclick="showPrompt()">Show Prompt</button>
+  </section>
+
+ 
+  <section class="long-text">
+    <h2>4. Scroll Test Section</h2>
+    <p>Scroll down to test scrolling behavior...</p>
+  </section>
+
+  <section class="long-text">
+    <h2>5. Hidden Content</h2>
+    <details>
+      <summary>Click to expand</summary>
+      <p>This is additional hidden content.</p>
+    </details>
+  </section>
+  
+  <section>
+    <h2>6. Table</h2>
+    <table border="1" cellpadding="5">
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td>Alice</td>
+        <td>alice@example.com</td>
+        <td>Active</td>
+      </tr>
+      <tr>
+        <td>Bob</td>
+        <td>bob@example.com</td>
+        <td>Inactive</td>
+      </tr>
+    </table>
+  </section>
+
+  <script>
+    function handleSubmit(event) {
+      alert("✅ Form submitted!");
+    }
+
+    function showAlert() {
+      alert("🚨 This is an alert message!");
+    }
+
+    function showConfirm() {
+      const result = confirm("❓ Do you confirm this action?");
+      alert("You clicked: " + (result ? "OK" : "Cancel"));
+    }
+
+    function showPrompt() {
+      const input = prompt("💬 Enter your name:");
+      alert("You entered: " + input);
+    }
+  </script>
+</body>
+</html>
