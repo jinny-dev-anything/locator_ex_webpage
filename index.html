@@ -181,7 +181,21 @@
     function showAlert() { alert("🚨 Alert message!"); }
     function showConfirm() { const r = confirm("❓ Confirm?"); alert("Clicked: " + r); }
     function showPrompt() { const r = prompt("💬 Enter your name:"); alert("You typed: " + r); }
+    
   </script>
+
+<script>
+  const hoverMenu = document.getElementById('hover-menu');
+  const submenu = document.getElementById('hover-submenu');
+
+  hoverMenu.addEventListener('mouseenter', () => {
+    submenu.style.display = 'block';
+  });
+  hoverMenu.addEventListener('mouseleave', () => {
+    // 테스트용: 마우스가 떠나도 닫히지 않게
+    // submenu.style.display = 'none';
+  });
+</script>
 
 </body>
 </html>
